@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<title>San Jose Weather Dashboard</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://unpkg.com/leaflet/dist/leaflet.css"
+/>
+
+</head>
+
+<body>
+
+<canvas id="rain"></canvas>
+
+<div id="signalWarning" class="signal-warning">
+⚠ Tropical Cyclone Wind Signal <span id="signalLevel"></span>
+</div>
+
+<div class="card">
+
+<div class="top">
+<h2>San Jose, Camarines Sur</h2>
+<p id="date"></p>
+</div>
+
+<div class="main-weather">
+
+<img id="icon">
+
+<div>
+<h1 id="temperature">--°C</h1>
+<p id="description"></p>
+</div>
+
+</div>
+
+<div class="details">
+
+<div>
+<p>Humidity</p>
+<h3 id="humidity"></h3>
+</div>
+
+<div>
+<p>Wind Speed</p>
+<h3 id="wind"></h3>
+</div>
+
+</div>
+
+<div class="forecast-wrapper">
+
+<button class="scroll-btn" onclick="moveLeft()">❮</button>
+
+<div class="forecast" id="forecast"></div>
+
+<button class="scroll-btn" onclick="moveRight()">❯</button>
+
+</div>
+
+</div>
+
+<div id="map"></div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
